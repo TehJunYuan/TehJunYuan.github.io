@@ -1,7 +1,6 @@
 # 👨‍💻 Teh Jun Yuan
 
-**Full Stack Developer | Bachelor of Software Engineering Graduate | **
-**You can view my portfolio via this link https://tehjunyuan.github.io/**
+**Full Stack Developer | Bachelor of Software Engineering Graduate | You can view my portfolio via this link https://tehjunyuan.github.io/**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/TehJunYuan)
@@ -145,5 +144,6 @@ I'm actively seeking opportunities to:
 ---
 
 *"Building robust applications and solving complex problems through code."*
+
 
 
