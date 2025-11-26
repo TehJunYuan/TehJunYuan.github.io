@@ -16,11 +16,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(33, 37, 41, 0.95)';
-        navbar.style.backdropFilter = 'blur(10px)';
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+        navbar.style.backdropFilter = 'blur(20px)';
     } else {
-        navbar.style.backgroundColor = '#212529';
-        navbar.style.backdropFilter = 'none';
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+        navbar.style.backdropFilter = 'blur(20px)';
     }
 });
 
@@ -46,7 +48,46 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Form submission removed - contact form no longer needed
+// Initialize EmailJS
+(function() {
+    emailjs.init("YOUR_PUBLIC_KEY"); // You'll need to replace this with your EmailJS public key
+})();
+
+// Form submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+    
+    // Simple validation
+    if (name && email && subject && message) {
+        // Show loading state
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        // Send email using EmailJS
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+            .then(function() {
+                alert('Thank you for your message! I will get back to you soon.');
+                document.getElementById('contactForm').reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }, function(error) {
+                console.error('EmailJS Error:', error);
+                alert('Sorry, there was an error sending your message. Please try again or contact me directly at junyuan741@gmail.com');
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            });
+    } else {
+        alert('Please fill in all fields.');
+    }
+});
 
 // Scroll animations
 const observerOptions = {
