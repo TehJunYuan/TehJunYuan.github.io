@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teh Jun Yuan - Full Stack Developer Portfolio</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%236366f1' d='M14.5 2a1.5 1.5 0 0 1 1.5 1.5v11a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-11A1.5 1.5 0 0 1 1.5 2h13zm-13-1a2.5 2.5 0 0 0-2.5 2.5v11a2.5 2.5 0 0 0 2.5 2.5h13a2.5 2.5 0 0 0 2.5-2.5v-11A2.5 2.5 0 0 0 14.5 1h-13z'/%3E%3Cpath fill='%236366f1' d='M5 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z'/%3E%3C/svg%3E">
+    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +21,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">Teh Jun Yuan</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -55,7 +58,12 @@
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
                     <h1 class="display-4 fw-bold mb-4">Hi, I'm <span class="text-primary">Teh Jun Yuan</span></h1>
-                    <p class="lead mb-4">Full Stack Developer | Bachelor of Software Engineering Graduate | Over 1 Year Professional Experience | Specialized in ERP Systems, Web Platforms & Backend Integrations</p>
+                    <ul class="lead mb-4 list-unstyled">
+                        <li class="mb-2"><i class="bi bi-code-slash me-2"></i>Full Stack Developer</li>
+                        <li class="mb-2"><i class="bi bi-mortarboard me-2"></i>Bachelor of Software Engineering Graduate</li>
+                        <li class="mb-2"><i class="bi bi-briefcase me-2"></i>Over 1 Year Professional Experience</li>
+                        <li class="mb-2"><i class="bi bi-gear me-2"></i>Specialized in ERP Systems, Web Platforms & Backend Integrations</li>
+                    </ul>
                     <div class="d-flex gap-3">
                         <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
                         <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
@@ -74,23 +82,31 @@
     <section id="about" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">About Me</h2>
-            <div class="row">
+            <div class="row g-4">
                 <div class="col-lg-6">
-                    <h3>Who I Am</h3>
-                    <p>A recent Bachelor of Software Engineering graduate with over half a year of professional experience as a Full Stack Developer. Proven ability to deliver robust applications, enhance system performance, and collaborate effectively within development teams.</p>
-                    <p>Eager to apply my technical expertise and problem-solving skills to contribute to innovative software projects.</p>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4"><i class="bi bi-person-badge text-primary me-2"></i>Who I Am</h3>
+                            <p class="card-text">A recent Bachelor of Software Engineering graduate with over half a year of professional experience as a Full Stack Developer. Proven ability to deliver robust applications, enhance system performance, and collaborate effectively within development teams.</p>
+                            <p class="card-text mb-0">Eager to apply my technical expertise and problem-solving skills to contribute to innovative software projects.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6">
-                    <h3>Education</h3>
-                    <div class="mb-3">
-                        <h5>Bachelor of Software Engineering</h5>
-                        <p class="text-muted mb-1">Southern University College (2023-2025)</p>
-                        <p class="mb-0"><strong>CGPA:</strong> 3.66</p>
-                    </div>
-                    <div>
-                        <h5>Diploma in Information Technology</h5>
-                        <p class="text-muted mb-1">Southern University College (2020-2023)</p>
-                        <p class="mb-0"><strong>CGPA:</strong> 3.44</p>
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title mb-4"><i class="bi bi-mortarboard text-success me-2"></i>Education</h3>
+                            <div class="mb-4">
+                                <h5 class="mb-2">Bachelor of Software Engineering</h5>
+                                <p class="text-muted mb-1"><i class="bi bi-building me-1"></i>Southern University College (2023-2025)</p>
+                                <p class="mb-0"><strong>CGPA:</strong> <span class="badge bg-primary">3.66</span></p>
+                            </div>
+                            <div>
+                                <h5 class="mb-2">Diploma in Information Technology</h5>
+                                <p class="text-muted mb-1"><i class="bi bi-building me-1"></i>Southern University College (2020-2023)</p>
+                                <p class="mb-0"><strong>CGPA:</strong> <span class="badge bg-primary">3.44</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -412,20 +428,73 @@
     <!-- Contact Section -->
     <section id="contact" class="py-5 bg-dark text-white">
         <div class="container">
-            <h2 class="text-center mb-5">Get In Touch</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="text-center">
-                        <h4>Connect With Me</h4>
-                        <div class="contact-info mt-3 mb-4">
-                            <p class="mb-2"><i class="bi bi-telephone me-2"></i><a href="tel:0183817870" class="text-white text-decoration-none">018-381-7870</a></p>
-                            <p class="mb-2"><i class="bi bi-envelope me-2"></i><a href="mailto:junyuan741@gmail.com" class="text-white text-decoration-none">junyuan741@gmail.com</a></p>
+            <div class="text-center mb-5">
+                <h2 class="mb-3">Let's Work Together</h2>
+                <p class="lead text-muted">Ready to bring your ideas to life</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="contact-info-cards">
+                        <div class="contact-card mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="contact-icon me-3">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Email</h5>
+                                    <p class="text-muted mb-0">junyuan741@gmail.com</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="social-links mt-3">
-                            <a href="https://github.com" target="_blank" class="text-white me-3" title="GitHub"><i class="bi bi-github fs-3"></i></a>
-                            <a href="https://linkedin.com" target="_blank" class="text-white me-3" title="LinkedIn"><i class="bi bi-linkedin fs-3"></i></a>
-                            <a href="mailto:junyuan741@gmail.com" class="text-white" title="Email"><i class="bi bi-envelope fs-3"></i></a>
+                        <div class="contact-card mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="contact-icon me-3">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Phone</h5>
+                                    <p class="text-muted mb-0">(+60)18-381-7870</p>
+                                </div>
+                            </div>
                         </div>
+                        <div class="contact-card mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="contact-icon me-3">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Location</h5>
+                                    <p class="text-muted mb-0">Malaysia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links d-flex gap-3">
+                            <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="contact-form-card">
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control contact-input" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control contact-input" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control contact-input" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control contact-input" id="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-gradient btn-lg w-100">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -758,6 +827,8 @@
         </div>
     </footer>
 
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
