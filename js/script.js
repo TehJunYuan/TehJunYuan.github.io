@@ -33,6 +33,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const lightbox = document.getElementById('image-lightbox');
+  const lightboxImage = lightbox?.querySelector('.image-lightbox-image');
+  const lightboxCaption = lightbox?.querySelector('.image-lightbox-caption');
+  const closeLightbox = lightbox?.querySelector('.image-lightbox-close');
+  document.querySelectorAll('.project-gallery .gallery-grid img').forEach(image => {
+    const caption = image.closest('figure')?.querySelector('figcaption')?.textContent?.trim() || image.alt;
+    image.tabIndex = 0;
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', `Enlarge screenshot: ${caption}`);
+    image.addEventListener('click', () => {
+      if (!lightbox || !lightboxImage || !lightboxCaption) return;
+      lightboxImage.src = image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightboxCaption.textContent = caption;
+      lightbox.showModal();
+    });
+    image.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        image.click();
+      }
+    });
+  });
+  closeLightbox?.addEventListener('click', () => lightbox?.close());
+  lightbox?.addEventListener('click', event => {
+    if (event.target === lightbox) lightbox.close();
+  });
+
   const sections = [...document.querySelectorAll('main section[id]')];
   const links = [...document.querySelectorAll('.navbar .nav-link')];
   if ('IntersectionObserver' in window) {
