@@ -865,7 +865,7 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 #about .glass-card,#experience .glass-card,#projects .glass-card,#skills .glass-card,#recognition .glass-card{background:linear-gradient(145deg,#1b2039,#171b31)!important;border-color:#363857!important;color:#e6e6f1}
 
 /* Resume-backed experience detail */
-.timeline-item .role-stackline{margin:14px 0 13px;padding:11px 14px;border-left:2px solid #8b5cf6;background:#8b5cf611;border-radius:0 7px 7px 0;color:#d2c9ec;font-size:13px;line-height:1.65}
+.timeline-item .role-stackline{margin:16px 0;padding:14px 16px;border:1px solid #383653;border-left:3px solid #8b5cf6;border-radius:10px;background:linear-gradient(135deg,#8b5cf617,#ffffff05);box-shadow:0 8px 20px #080a1a20;color:#d2c9ec;font-size:13px;line-height:1.65}
 .role-stackline strong{color:#c5adff;font-weight:650}
 .timeline-item ul{margin:0;padding-left:20px;max-width:850px;color:#c2c5d6;font-size:14px;line-height:1.75}
 .timeline-item li{padding-left:4px;margin:0 0 6px}
@@ -931,7 +931,7 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 :root[data-theme="light"] .timeline-dot{border-color:#eeedf4;background:#7754c3}
 :root[data-theme="light"] .timeline-item h3 small{color:#69657b}
 :root[data-theme="light"] .timeline-item h4{color:#5b428f}
-:root[data-theme="light"] .timeline-item .role-stackline{background:#e5e0f0;border-color:#7956c7;color:#4c4562}
+:root[data-theme="light"] .timeline-item .role-stackline{background:linear-gradient(135deg,#f5f1fb,#eeeaf5);border-color:#d7cdea;border-left-color:#7956c7;color:#4c4562;box-shadow:0 6px 18px #3226530b}
 :root[data-theme="light"] .role-stackline strong{color:#533d91}
 :root[data-theme="light"] .timeline-item li::marker{color:#694bb3}
 :root[data-theme="light"] .tag-row span{background:#e8e4ef;border-color:#d2cbdf;color:#4d4760}
