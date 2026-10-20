@@ -863,3 +863,11 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 #about,#experience,#projects,#skills,#recognition{background:#11152b!important;color:#f3f2fb}
 #about::before,#experience::before,#projects::before,#skills::before,#recognition::before{opacity:0}
 #about .glass-card,#experience .glass-card,#projects .glass-card,#skills .glass-card,#recognition .glass-card{background:linear-gradient(145deg,#1b2039,#171b31)!important;border-color:#363857!important;color:#e6e6f1}
+
+/* Resume-backed experience detail */
+.timeline-item .role-stackline{margin:14px 0 13px;padding:11px 14px;border-left:2px solid #8b5cf6;background:#8b5cf611;border-radius:0 7px 7px 0;color:#d2c9ec;font-size:13px;line-height:1.65}
+.role-stackline strong{color:#c5adff;font-weight:650}
+.timeline-item ul{margin:0;padding-left:20px;max-width:850px;color:#c2c5d6;font-size:14px;line-height:1.75}
+.timeline-item li{padding-left:4px;margin:0 0 6px}
+.timeline-item li::marker{color:#a78bfa}
+@media(max-width:575.98px){.timeline-item .role-stackline{font-size:12px;padding:10px 11px}.timeline-item ul{font-size:13px;padding-left:18px}}
