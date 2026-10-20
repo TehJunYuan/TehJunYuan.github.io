@@ -2,6 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
+  const themeButton = document.getElementById('theme-toggle');
+  const themeIcon = themeButton?.querySelector('i');
+  const themeLabel = themeButton?.querySelector('span');
+  const applyTheme = theme => {
+    document.documentElement.dataset.theme = theme;
+    if (themeIcon) themeIcon.className = theme === 'dark' ? 'bi bi-sun-fill' : 'bi bi-moon-stars-fill';
+    if (themeLabel) themeLabel.textContent = theme === 'dark' ? 'Light' : 'Dark';
+    if (themeButton) {
+      const nextTheme = theme === 'dark' ? 'light' : 'dark';
+      themeButton.setAttribute('aria-label', `Switch to ${nextTheme} theme`);
+      themeButton.title = `Switch to ${nextTheme} theme`;
+    }
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#11152b' : '#eeedf4');
+  };
+  applyTheme(document.documentElement.dataset.theme === 'light' ? 'light' : 'dark');
+  themeButton?.addEventListener('click', () => {
+    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    applyTheme(nextTheme);
+    try { localStorage.setItem('portfolio-theme', nextTheme); } catch {}
+  });
+
   const nav = document.getElementById('navbarNav');
   if (nav && window.bootstrap) {
     const collapse = bootstrap.Collapse.getOrCreateInstance(nav, { toggle: false });

@@ -6,20 +6,20 @@
   <meta name="theme-color" content="#11152b">
   <meta name="description" content="Teh Jun Yuan is a Software Engineer in Johor Bahru, Malaysia. Explore his projects, professional experience, education, and technical skills.">
   <title>Teh Jun Yuan — Software Engineer</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('portfolio-theme')||'dark'}catch{document.documentElement.dataset.theme='dark'}</script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2311152b'/%3E%3Ctext x='8' y='43' fill='%238b5cf6' font-family='Arial' font-weight='bold' font-size='29'%3EJY%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=experience-detail-20261021">
+  <link rel="stylesheet" href="css/style.css?v=theme-switch-20261021">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
     <div class="container">
       <a class="navbar-brand" href="#home">Teh Jun Yuan<span class="brand-period">.</span></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -29,6 +29,10 @@
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
+      </div>
+      <div class="navbar-tools">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Switch to light theme"><i class="bi bi-sun-fill" aria-hidden="true"></i><span>Light</span></button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       </div>
     </div>
   </nav>
@@ -126,6 +130,6 @@
   </main>
   <footer class="site-footer"><div class="container"><span>© <span id="year">2026</span> Teh Jun Yuan</span><span>Software Engineer</span><a href="#home">Back to top ↑</a></div></footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js?v=purple-refresh-20261021b" defer></script>
+  <script src="js/script.js?v=theme-switch-20261021" defer></script>
 </body>
 </html>

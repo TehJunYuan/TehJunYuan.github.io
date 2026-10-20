@@ -871,3 +871,104 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 .timeline-item li{padding-left:4px;margin:0 0 6px}
 .timeline-item li::marker{color:#a78bfa}
 @media(max-width:575.98px){.timeline-item .role-stackline{font-size:12px;padding:10px 11px}.timeline-item ul{font-size:13px;padding-left:18px}}
+
+/* User-controlled Dark / Light theme */
+.navbar .container{flex-wrap:wrap}
+.navbar-collapse{order:1}
+.navbar-tools{order:2;display:flex;align-items:center;gap:10px;margin-left:14px}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:82px;padding:9px 12px;border:1px solid #625890;border-radius:9px;background:#8b5cf615;color:#e8ddff;font:600 13px/1.1 'Inter',sans-serif;transition:background .18s,border-color .18s,color .18s}
+.theme-toggle:hover{background:#8b5cf633;border-color:#a78bfa;color:#fff}
+.theme-toggle i{font-size:14px;color:#c6a9ff}
+.navbar-tools .navbar-toggler{display:none}
+.theme-toggle:focus-visible,.navbar-toggler:focus-visible{outline:3px solid #b59aff;outline-offset:3px;box-shadow:none}
+@media(max-width:991.98px){.navbar .container{align-items:center}.navbar-brand{order:0}.navbar-tools{order:1;margin-left:auto}.navbar-tools .navbar-toggler{display:block}.navbar-collapse{order:2;flex:0 0 100%;width:100%}}
+
+:root[data-theme="light"]{color-scheme:light}
+:root[data-theme="light"] body{background:#eeedf4;color:#26243a}
+:root[data-theme="light"] .navbar{background:rgba(242,240,248,.95)!important;border-color:#ded9ec;box-shadow:0 8px 30px #24203b12}
+:root[data-theme="light"] .navbar-brand{color:#27243b!important}
+:root[data-theme="light"] .nav-link{color:#504d65!important}
+:root[data-theme="light"] .nav-link:hover,:root[data-theme="light"] .nav-link.active{background:#7653d514;color:#5737b2!important}
+:root[data-theme="light"] .navbar-toggler{border-color:#b9afd5}
+:root[data-theme="light"] .navbar-toggler-icon{filter:none}
+:root[data-theme="light"] .theme-toggle{background:#e5e1ef;border-color:#c9c0de;color:#3c315f}
+:root[data-theme="light"] .theme-toggle:hover{background:#ddd5ed;border-color:#9b82d1;color:#332452}
+:root[data-theme="light"] .theme-toggle i{color:#6542bd}
+:root[data-theme="light"] .hero-section{background:linear-gradient(130deg,#eeedf5,#e9e6f2 55%,#e7e2f1)}
+:root[data-theme="light"] .hero-section::before{background:radial-gradient(ellipse at 18% 48%,rgba(99,102,241,.12),transparent 43%),radial-gradient(ellipse at 84% 70%,rgba(139,92,246,.12),transparent 43%),radial-gradient(ellipse at 62% 5%,rgba(217,70,239,.08),transparent 40%)}
+:root[data-theme="light"] .hero-section h1{color:#28243d}
+:root[data-theme="light"] .hero-section h1 .text-primary{background:linear-gradient(105deg,#514acb,#7444bb 60%,#ad4b9c);-webkit-background-clip:text;background-clip:text}
+:root[data-theme="light"] .hero-kicker{color:#514477}
+:root[data-theme="light"] .kicker-divider{color:#8e86a5}
+:root[data-theme="light"] .status-dot{background:#7956c7;box-shadow:0 0 10px #7956c744}
+:root[data-theme="light"] .hero-intro{color:#514d64}
+:root[data-theme="light"] .hero-facts{color:#454158}
+:root[data-theme="light"] .hero-facts i{color:#694bb3}
+:root[data-theme="light"] .hero-section .btn-primary{background:linear-gradient(125deg,#5a4ccc,#8150c4);border-color:#7764ce;color:#fff}
+:root[data-theme="light"] .hero-section .btn-outline-light{border-color:#b2a6cd;color:#44365f;background:#ffffff4d}
+:root[data-theme="light"] .hero-section .btn-outline-light:hover{background:#ffffff91;border-color:#8168bb}
+:root[data-theme="light"] .hero-email{color:#533a99}
+:root[data-theme="light"] .hero-email:hover{color:#8b3f91}
+:root[data-theme="light"] .orbit-ring{border-color:#7865b955}
+:root[data-theme="light"] .orbit-ring-two{border-color:#8b5cf666}
+:root[data-theme="light"] .orbit-core{background:linear-gradient(145deg,#574ca7,#44316d);border-color:#8068c9;color:#faf8ff;box-shadow:0 0 0 16px #7658ce10,0 22px 55px #4d3b7d28}
+:root[data-theme="light"] .orbit-spark{background:#8b5cf6;box-shadow:0 0 13px #8b5cf655}
+:root[data-theme="light"] .hero-art-caption,:root[data-theme="light"] .scroll-cue{color:#68617e}
+:root[data-theme="light"] #about,:root[data-theme="light"] #experience,:root[data-theme="light"] #projects,:root[data-theme="light"] #skills,:root[data-theme="light"] #recognition{background:#eeedf4!important;color:#29263d}
+:root[data-theme="light"] #about::before,:root[data-theme="light"] #experience::before,:root[data-theme="light"] #projects::before,:root[data-theme="light"] #skills::before,:root[data-theme="light"] #recognition::before{opacity:0}
+:root[data-theme="light"] .section-intro h2{color:#29263d}
+:root[data-theme="light"] .section-kicker,:root[data-theme="light"] .project-label,:root[data-theme="light"] .timeline-meta{color:#634a9c}
+:root[data-theme="light"] .section-summary{color:#5e5a70}
+:root[data-theme="light"] .glass-card,:root[data-theme="light"] #about .glass-card,:root[data-theme="light"] #experience .glass-card,:root[data-theme="light"] #projects .glass-card,:root[data-theme="light"] #skills .glass-card,:root[data-theme="light"] #recognition .glass-card{background:linear-gradient(145deg,#f6f4fa,#e9e6f1)!important;border-color:#d7d1e3!important;color:#343047;box-shadow:0 12px 32px #3226530c}
+:root[data-theme="light"] .about-card h3,:root[data-theme="light"] .card-heading h3,:root[data-theme="light"] .skill-card h3,:root[data-theme="light"] .recognition-card h3,:root[data-theme="light"] .education-item h4,:root[data-theme="light"] .timeline-item h3,:root[data-theme="light"] .project-feature-copy h3,:root[data-theme="light"] .project-card h3,:root[data-theme="light"] .compact-project h3{color:#302b45}
+:root[data-theme="light"] .about-card p,:root[data-theme="light"] .education-card p,:root[data-theme="light"] .recognition-card p,:root[data-theme="light"] .timeline-item>p,:root[data-theme="light"] .timeline-item ul,:root[data-theme="light"] .project-feature-copy>p:not(.project-label):not(.private-note),:root[data-theme="light"] .project-card-body>p:not(.project-label),:root[data-theme="light"] .project-feature-copy ul,:root[data-theme="light"] .skill-card p,:root[data-theme="light"] .compact-project p:not(.project-label){color:#555166}
+:root[data-theme="light"] .about-highlights{border-color:#d9d4e4;color:#574783}
+:root[data-theme="light"] .about-highlights b,:root[data-theme="light"] .education-date{color:#694db0}
+:root[data-theme="light"] .education-item{border-color:#d8d3e3}
+:root[data-theme="light"] .grade-pill,:root[data-theme="light"] .current-pill{background:#e7e1f3;border-color:#c9bce3;color:#4f3982}
+:root[data-theme="light"] .timeline{border-color:#c5b9d9}
+:root[data-theme="light"] .timeline-item{border-color:#ddd8e7}
+:root[data-theme="light"] .timeline-dot{border-color:#eeedf4;background:#7754c3}
+:root[data-theme="light"] .timeline-item h3 small{color:#69657b}
+:root[data-theme="light"] .timeline-item h4{color:#5b428f}
+:root[data-theme="light"] .timeline-item .role-stackline{background:#e5e0f0;border-color:#7956c7;color:#4c4562}
+:root[data-theme="light"] .role-stackline strong{color:#533d91}
+:root[data-theme="light"] .timeline-item li::marker{color:#694bb3}
+:root[data-theme="light"] .tag-row span{background:#e8e4ef;border-color:#d2cbdf;color:#4d4760}
+:root[data-theme="light"] .project-diagram{background:radial-gradient(circle at 15% 5%,#c9b9e733,transparent 45%),linear-gradient(135deg,#e5e1ed,#efedf4);border-color:#d6d0e1}
+:root[data-theme="light"] .diagram-label,:root[data-theme="light"] .diagram-foot{color:#624b98}
+:root[data-theme="light"] .diagram-node{background:#f3f1f7;border-color:#cbc3dc}
+:root[data-theme="light"] .diagram-node small{color:#65558f}
+:root[data-theme="light"] .diagram-node strong{color:#322b49}
+:root[data-theme="light"] .diagram-node span{color:#5f5a70}
+:root[data-theme="light"] .diagram-core{background:linear-gradient(130deg,#e1daf1,#ede8f6);border-color:#9278c9}
+:root[data-theme="light"] .diagram-connector{color:#5e5675}
+:root[data-theme="light"] .diagram-connector:before{background:#a89abd}
+:root[data-theme="light"] .diagram-connector span{background:#e8e4f0}
+:root[data-theme="light"] .diagram-branches span{background:#f3f1f7;border-color:#d0c9df;color:#4d3d75}
+:root[data-theme="light"] .project-image{background:#e5e1ed}
+:root[data-theme="light"] .project-image-label{background:#30274bdd;color:#faf8ff;border-color:#ffffff66}
+:root[data-theme="light"] .private-note{color:#625c72}
+:root[data-theme="light"] .project-link{color:#553b99}
+:root[data-theme="light"] .project-link:hover{color:#8b3f91}
+:root[data-theme="light"] .project-gallery{border-color:#d5cfdf}
+:root[data-theme="light"] .project-gallery summary{color:#47366f}
+:root[data-theme="light"] .gallery-grid figure{background:#f5f3f8;border-color:#d3cde0}
+:root[data-theme="light"] .gallery-grid img{background:#e6e2ed}
+:root[data-theme="light"] .gallery-grid figcaption{color:#514b64}
+:root[data-theme="light"] .compact-project-icon{background:#e7e1f2;border-color:#c8bde0;color:#6043a6}
+:root[data-theme="light"] .skill-index{color:#746b8e}
+:root[data-theme="light"] .card-icon,:root[data-theme="light"] .card-heading>i,:root[data-theme="light"] .skill-icon,:root[data-theme="light"] .recognition-card>i{color:#6548ae}
+:root[data-theme="light"] .recognition-card a{color:#523794}
+:root[data-theme="light"] .contact-section{background:linear-gradient(135deg,#e7e2f1,#ddd5eb);color:#302747;border-color:#d0c5e4}
+:root[data-theme="light"] .contact-heading p{color:#5b536d}
+:root[data-theme="light"] .contact-heading h2 span{color:#6846b5}
+:root[data-theme="light"] .contact-arrow{border-color:#a99bc4;color:#48366f}
+:root[data-theme="light"] .contact-arrow:hover{background:#d8c9ed;color:#302747}
+:root[data-theme="light"] .contact-links{border-color:#bdb2d1}
+:root[data-theme="light"] .contact-links a{color:#4d4265}
+:root[data-theme="light"] .contact-links a:hover{color:#6b47b0}
+:root[data-theme="light"] .site-footer{background:#e3e0ec;color:#5d586d}
+:root[data-theme="light"] .site-footer a{color:#543895}
+:root[data-theme="light"] .skip-link{background:#302747;color:#fff}
+:root[data-theme="light"] .navbar-toggler-icon{filter:brightness(.55) sepia(.5) hue-rotate(215deg)}
