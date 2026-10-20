@@ -865,12 +865,14 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 #about .glass-card,#experience .glass-card,#projects .glass-card,#skills .glass-card,#recognition .glass-card{background:linear-gradient(145deg,#1b2039,#171b31)!important;border-color:#363857!important;color:#e6e6f1}
 
 /* Resume-backed experience detail */
-.timeline-item .role-stackline{margin:16px 0;padding:14px 16px;border:1px solid #383653;border-left:3px solid #8b5cf6;border-radius:10px;background:linear-gradient(135deg,#8b5cf617,#ffffff05);box-shadow:0 8px 20px #080a1a20;color:#d2c9ec;font-size:13px;line-height:1.65}
-.role-stackline strong{color:#c5adff;font-weight:650}
+.timeline-item .role-stackline{margin:16px 0;display:flex;align-items:flex-start;gap:12px;color:#d2c9ec;font-size:13px;line-height:1.5}
+.role-stackline>strong{flex:none;padding-top:7px;color:#c5adff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.stack-chips{display:flex;flex:1;flex-wrap:wrap;gap:8px}
+.stack-chip{display:inline-flex;align-items:center;min-height:34px;padding:6px 11px;border:1px solid #3d3959;border-radius:8px;background:linear-gradient(145deg,#211f3b,#191a30);box-shadow:0 5px 14px #080a1a24;color:#e0daf1;font-size:12px;line-height:1.35}
 .timeline-item ul{margin:0;padding-left:20px;max-width:850px;color:#c2c5d6;font-size:14px;line-height:1.75}
 .timeline-item li{padding-left:4px;margin:0 0 6px}
 .timeline-item li::marker{color:#a78bfa}
-@media(max-width:575.98px){.timeline-item .role-stackline{font-size:12px;padding:10px 11px}.timeline-item ul{font-size:13px;padding-left:18px}}
+@media(max-width:575.98px){.timeline-item .role-stackline{gap:8px;font-size:12px}.role-stackline>strong{padding-top:8px;font-size:10px}.stack-chips{gap:6px}.stack-chip{min-height:31px;padding:5px 9px;font-size:11px}.timeline-item ul{font-size:13px;padding-left:18px}}
 
 /* User-controlled Dark / Light theme */
 .navbar .container{flex-wrap:wrap}
@@ -931,8 +933,9 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 :root[data-theme="light"] .timeline-dot{border-color:#eeedf4;background:#7754c3}
 :root[data-theme="light"] .timeline-item h3 small{color:#69657b}
 :root[data-theme="light"] .timeline-item h4{color:#5b428f}
-:root[data-theme="light"] .timeline-item .role-stackline{background:linear-gradient(135deg,#f5f1fb,#eeeaf5);border-color:#d7cdea;border-left-color:#7956c7;color:#4c4562;box-shadow:0 6px 18px #3226530b}
-:root[data-theme="light"] .role-stackline strong{color:#533d91}
+:root[data-theme="light"] .timeline-item .role-stackline{color:#4c4562}
+:root[data-theme="light"] .role-stackline>strong{color:#533d91}
+:root[data-theme="light"] .stack-chip{background:linear-gradient(145deg,#f8f6fb,#ede9f4);border-color:#d7d0e3;box-shadow:0 5px 14px #3226530b;color:#433c58}
 :root[data-theme="light"] .timeline-item li::marker{color:#694bb3}
 :root[data-theme="light"] .tag-row span{background:#e8e4ef;border-color:#d2cbdf;color:#4d4760}
 :root[data-theme="light"] .project-diagram{background:radial-gradient(circle at 15% 5%,#c9b9e733,transparent 45%),linear-gradient(135deg,#e5e1ed,#efedf4);border-color:#d6d0e1}
