@@ -37,16 +37,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxImage = lightbox?.querySelector('.image-lightbox-image');
   const lightboxCaption = lightbox?.querySelector('.image-lightbox-caption');
   const closeLightbox = lightbox?.querySelector('.image-lightbox-close');
-  document.querySelectorAll('.project-gallery .gallery-grid img').forEach(image => {
+  const previousScreenshot = lightbox?.querySelector('.image-lightbox-prev');
+  const nextScreenshot = lightbox?.querySelector('.image-lightbox-next');
+  const lightboxCount = lightbox?.querySelector('.image-lightbox-count');
+  let activeScreenshots = [];
+  let activeScreenshotIndex = 0;
+  const showScreenshot = index => {
+    if (!lightboxImage || !lightboxCaption || !activeScreenshots.length) return;
+    activeScreenshotIndex = (index + activeScreenshots.length) % activeScreenshots.length;
+    const image = activeScreenshots[activeScreenshotIndex];
     const caption = image.closest('figure')?.querySelector('figcaption')?.textContent?.trim() || image.alt;
+    lightboxImage.src = image.currentSrc || image.src;
+    lightboxImage.alt = image.alt;
+    lightboxCaption.textContent = caption;
+    if (lightboxCount) lightboxCount.textContent = `${activeScreenshotIndex + 1} / ${activeScreenshots.length}`;
+    const showNavigation = activeScreenshots.length > 1;
+    if (previousScreenshot) previousScreenshot.hidden = !showNavigation;
+    if (nextScreenshot) nextScreenshot.hidden = !showNavigation;
+    if (lightboxCount) lightboxCount.hidden = !showNavigation;
+  };
+  document.querySelectorAll('.project-gallery .gallery-grid img').forEach(image => {
     image.tabIndex = 0;
     image.setAttribute('role', 'button');
+    const caption = image.closest('figure')?.querySelector('figcaption')?.textContent?.trim() || image.alt;
     image.setAttribute('aria-label', `Enlarge screenshot: ${caption}`);
     image.addEventListener('click', () => {
       if (!lightbox || !lightboxImage || !lightboxCaption) return;
-      lightboxImage.src = image.currentSrc || image.src;
-      lightboxImage.alt = image.alt;
-      lightboxCaption.textContent = caption;
+      const gallery = image.closest('.project-gallery');
+      activeScreenshots = [...(gallery?.querySelectorAll('.gallery-grid img') || [image])];
+      showScreenshot(activeScreenshots.indexOf(image));
       lightbox.showModal();
     });
     image.addEventListener('keydown', event => {
@@ -55,6 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
         image.click();
       }
     });
+  });
+  previousScreenshot?.addEventListener('click', () => showScreenshot(activeScreenshotIndex - 1));
+  nextScreenshot?.addEventListener('click', () => showScreenshot(activeScreenshotIndex + 1));
+  lightbox?.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' && activeScreenshots.length > 1) {
+      event.preventDefault();
+      showScreenshot(activeScreenshotIndex - 1);
+    }
+    if (event.key === 'ArrowRight' && activeScreenshots.length > 1) {
+      event.preventDefault();
+      showScreenshot(activeScreenshotIndex + 1);
+    }
   });
   closeLightbox?.addEventListener('click', () => lightbox?.close());
   lightbox?.addEventListener('click', event => {
