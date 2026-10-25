@@ -1004,3 +1004,19 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 :root[data-theme="light"] .image-lightbox-nav{border-color:#c8bddb;background:#e8e2f1;color:#3d3158}
 @media(max-width:575.98px){.image-lightbox{padding:48px 48px 18px}.image-lightbox-nav{width:36px;height:36px;font-size:15px}.image-lightbox-prev{left:7px}.image-lightbox-next{right:7px}}
 @media(prefers-reduced-motion:reduce){.gallery-grid img{transition:none}}
+
+/* Make the featured ERP case study's ownership and scope easy to scan. */
+.project-role{display:grid;gap:3px;margin:22px 0 18px;padding:14px 16px;border:1px solid #393b59;border-left:3px solid #9b7be8;border-radius:8px;background:#191d35}
+.project-role>span{color:#a99bd5;font-size:10px;font-weight:700;letter-spacing:1px}
+.project-role>strong{color:#f1effb;font-size:16px;font-weight:650}
+.project-role>small{color:#b5b6c9;font-size:13px}
+.project-scope-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:0 0 18px}
+.project-scope-row{display:grid;align-content:start;gap:7px;padding:13px;border:1px solid #373a56;border-radius:8px;background:#171b31}
+.project-scope-row>strong{color:#bba8f2;font-size:10px;letter-spacing:.65px}
+.project-scope-row>span{color:#c1c5d7;font-size:12px;line-height:1.55}
+@media(max-width:575.98px){.project-scope-grid{grid-template-columns:1fr}.project-scope-row{grid-template-columns:110px 1fr;align-items:start;gap:10px}}
+:root[data-theme="light"] .project-role{background:#f1eef8;border-color:#d5cee5;border-left-color:#8060c3}
+:root[data-theme="light"] .project-role>span,:root[data-theme="light"] .project-scope-row>strong{color:#634a9c}
+:root[data-theme="light"] .project-role>strong{color:#302b45}
+:root[data-theme="light"] .project-role>small,:root[data-theme="light"] .project-scope-row>span{color:#555166}
+:root[data-theme="light"] .project-scope-row{background:#f6f4fa;border-color:#ddd7e8}
