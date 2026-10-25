@@ -1023,10 +1023,15 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 .core-stack-panel{padding:22px 24px;border:1px solid #393b59;border-radius:13px;background:linear-gradient(145deg,#191d35,#15192e)}
 .core-stack-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:17px;padding-bottom:13px;border-bottom:1px solid #343751;color:#a99bd5;font-size:11px;font-weight:700;letter-spacing:1px}
 .core-stack-heading span:last-child{color:#9290a9;font-size:10px;font-weight:500;letter-spacing:.3px}
-.core-stack-list{display:flex;flex-wrap:wrap;gap:9px;list-style:none;margin:0;padding:0}
+.core-stack-marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 2%,#000 98%,transparent)}
+.core-stack-track{display:flex;width:max-content;animation:core-stack-scroll 42s linear infinite}
+.core-stack-panel:hover .core-stack-track{animation-play-state:paused}
+.core-stack-list{display:flex;flex:none;gap:9px;list-style:none;margin:0;padding:0 12px 0 0}
 .core-stack-list li{padding:7px 12px;border:1px solid #45415f;border-radius:999px;background:#20223c;color:#d6d2e5;font-size:13px;line-height:1.35;white-space:nowrap}
+@keyframes core-stack-scroll{to{transform:translateX(-50%)}}
 :root[data-theme="light"] .core-stack-panel{border-color:#d5cee5;background:linear-gradient(145deg,#f6f4fa,#eeebf5)}
 :root[data-theme="light"] .core-stack-heading{border-color:#d9d3e4;color:#634a9c}
 :root[data-theme="light"] .core-stack-heading span:last-child{color:#716c80}
 :root[data-theme="light"] .core-stack-list li{border-color:#d5cee2;background:#e9e5f1;color:#4d4760}
-@media(max-width:575.98px){.core-stack-panel{padding:18px}.core-stack-heading{align-items:flex-start;flex-direction:column;gap:3px}.core-stack-list{gap:7px}.core-stack-list li{padding:7px 10px;font-size:12px}}
+@media(max-width:575.98px){.core-stack-panel{padding:18px}.core-stack-heading{align-items:flex-start;flex-direction:column;gap:3px}.core-stack-list{gap:7px}.core-stack-list li{padding:7px 10px;font-size:12px}.core-stack-track{animation-duration:52s}}
+@media(prefers-reduced-motion:reduce){.core-stack-marquee{overflow-x:auto;mask-image:none}.core-stack-track{animation:none}}
