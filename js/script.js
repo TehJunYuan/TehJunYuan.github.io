@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!lightboxImage || !lightboxCaption || !activeScreenshots.length) return;
     activeScreenshotIndex = (index + activeScreenshots.length) % activeScreenshots.length;
     const image = activeScreenshots[activeScreenshotIndex];
-    const caption = image.closest('figure')?.querySelector('figcaption')?.textContent?.trim() || image.alt;
+    const caption = image.closest('.project-image')?.querySelector('.project-image-label')?.textContent?.trim() || image.alt;
     lightboxImage.src = image.currentSrc || image.src;
     lightboxImage.alt = image.alt;
     lightboxCaption.textContent = caption;
@@ -56,15 +56,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nextScreenshot) nextScreenshot.hidden = !showNavigation;
     if (lightboxCount) lightboxCount.hidden = !showNavigation;
   };
-  document.querySelectorAll('.project-gallery .gallery-grid img').forEach(image => {
+  document.querySelectorAll('.project-image img').forEach(image => {
     image.tabIndex = 0;
     image.setAttribute('role', 'button');
-    const caption = image.closest('figure')?.querySelector('figcaption')?.textContent?.trim() || image.alt;
-    image.setAttribute('aria-label', `Enlarge screenshot: ${caption}`);
+    const caption = image.closest('.project-image')?.querySelector('.project-image-label')?.textContent?.trim() || image.alt;
+    image.setAttribute('aria-label', `Enlarge image: ${caption}`);
     image.addEventListener('click', () => {
       if (!lightbox || !lightboxImage || !lightboxCaption) return;
-      const gallery = image.closest('.project-gallery');
-      activeScreenshots = [...(gallery?.querySelectorAll('.gallery-grid img') || [image])];
+      activeScreenshots = [...document.querySelectorAll('.project-image img')];
       showScreenshot(activeScreenshots.indexOf(image));
       lightbox.showModal();
     });
