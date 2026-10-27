@@ -984,6 +984,14 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 :root[data-theme="light"] .skip-link{background:#302747;color:#fff}
 :root[data-theme="light"] .navbar-toggler-icon{filter:brightness(.55) sepia(.5) hue-rotate(215deg)}
 
+/* Tighten the final transition from recognition into contact. */
+#recognition.content-section{padding-bottom:52px}
+#contact.contact-section{padding-top:58px}
+:root[data-theme="light"] .contact-heading p{color:#484158}
+:root[data-theme="light"] .contact-links a{color:#403653}
+@media(max-width:991.98px){#recognition.content-section{padding-bottom:48px}#contact.contact-section{padding-top:52px}}
+@media(max-width:575.98px){#recognition.content-section{padding-bottom:38px}#contact.contact-section{padding-top:42px}}
+
 .gallery-grid img{cursor:zoom-in}
 .gallery-grid img:focus-visible{outline:3px solid #9b7bff;outline-offset:2px}
 .image-lightbox{position:fixed;inset:0;width:min(96vw,1400px);max-width:none;max-height:92vh;margin:auto;padding:46px 20px 18px;border:1px solid #68589a;border-radius:14px;background:rgba(13,15,32,.97);color:#f2edff;box-shadow:0 24px 90px #0009}
