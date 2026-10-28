@@ -991,6 +991,12 @@ body{background:var(--night);color:var(--text);font:16px/1.72 'Inter',sans-serif
 :root[data-theme="light"] .contact-links a{color:#403653}
 @media(max-width:991.98px){#recognition.content-section{padding-bottom:48px}#contact.contact-section{padding-top:52px}}
 @media(max-width:575.98px){#recognition.content-section{padding-bottom:38px}#contact.contact-section{padding-top:42px}}
+:root[data-theme="light"] #contact.contact-section{background:linear-gradient(135deg,#e7e2f1,#ddd5eb)!important;color:#302747!important;border-color:#d0c5e4!important}
+:root[data-theme="light"] #contact .section-kicker{color:#624b98}
+:root[data-theme="light"] #contact .contact-heading p{color:#484158!important}
+:root[data-theme="light"] #contact .contact-arrow{border-color:#a99bc4;color:#48366f}
+:root[data-theme="light"] #contact .contact-links{border-color:#bdb2d1}
+:root[data-theme="light"] #contact .contact-links a{color:#403653!important}
 
 .gallery-grid img{cursor:zoom-in}
 .gallery-grid img:focus-visible{outline:3px solid #9b7bff;outline-offset:2px}
